@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>SWOT Single – Thầy Lê Hậu</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
   <style>
     :root {
-      --bg:   #0C0C0C;
+      --bg: #0C0C0C;
       --lime: #C8F135;
-      --coral:#FF6B6B;
-      --sky:  #5BE5FF;
+      --coral: #FF6B6B;
+      --sky: #5BE5FF;
       --viol: #B47FFF;
-      --off:  rgba(255,255,255,.5);
-      --line: rgba(255,255,255,.08);
+      --off: rgba(255, 255, 255, .5);
+      --line: rgba(255, 255, 255, .08);
       --W: 1080px;
       --H: 1080px;
     }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     body {
       font-family: 'Space Grotesk', sans-serif;
@@ -48,7 +55,7 @@
       background: var(--bg);
       position: relative;
       overflow: hidden;
-      box-shadow: 0 40px 100px rgba(0,0,0,.85);
+      box-shadow: 0 40px 100px rgba(0, 0, 0, .85);
       display: flex;
       transform-origin: top left;
       flex-shrink: 0;
@@ -56,7 +63,10 @@
 
     /* ── GRAIN ── */
     .grain {
-      position: absolute; inset: 0; z-index: 100; pointer-events: none;
+      position: absolute;
+      inset: 0;
+      z-index: 100;
+      pointer-events: none;
       opacity: .035;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
       background-size: 300px;
@@ -71,6 +81,7 @@
       position: relative;
       flex-shrink: 0;
     }
+
     .left-photo img {
       width: 100%;
       height: 100%;
@@ -78,12 +89,14 @@
       object-position: 50% 10%;
       display: block;
     }
+
     /* gradient: fade right edge into bg */
     .left-photo::after {
       content: '';
-      position: absolute; inset: 0;
+      position: absolute;
+      inset: 0;
       background:
-        linear-gradient(270deg, var(--bg) 0%, rgba(12,12,12,.55) 35%, transparent 65%),
+        linear-gradient(270deg, var(--bg) 0%, rgba(12, 12, 12, .55) 35%, transparent 65%),
         linear-gradient(0deg, var(--bg) 0%, transparent 30%),
         linear-gradient(180deg, var(--bg) 0%, transparent 18%);
     }
@@ -92,10 +105,12 @@
     .photo-name {
       position: absolute;
       bottom: 40px;
-      left: 0; right: 0;
+      left: 0;
+      right: 0;
       padding: 0 28px;
       z-index: 10;
     }
+
     .photo-name-main {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 30px;
@@ -103,6 +118,7 @@
       letter-spacing: 2px;
       line-height: 1.1;
     }
+
     .photo-name-role {
       font-size: 11px;
       color: var(--lime);
@@ -114,23 +130,44 @@
     /* top badge on photo */
     .photo-badge {
       position: absolute;
-      top: 36px; left: 28px;
+      top: 36px;
+      left: 28px;
       z-index: 10;
       display: flex;
       flex-direction: column;
       gap: 0;
     }
+
     .badge-letter {
-      width: 44px; height: 44px;
-      display: flex; align-items: center; justify-content: center;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-family: 'Bebas Neue', sans-serif;
       font-size: 22px;
       font-weight: 400;
     }
-    .bl-s { background: var(--lime); color: #000; }
-    .bl-w { background: var(--coral); color: #fff; }
-    .bl-o { background: var(--sky); color: #000; }
-    .bl-t { background: var(--viol); color: #fff; }
+
+    .bl-s {
+      background: var(--lime);
+      color: #000;
+    }
+
+    .bl-w {
+      background: var(--coral);
+      color: #fff;
+    }
+
+    .bl-o {
+      background: var(--sky);
+      color: #000;
+    }
+
+    .bl-t {
+      background: var(--viol);
+      color: #fff;
+    }
 
     /* ═══════════════════════════════
        RIGHT — SWOT CONTENT  (62%)
@@ -148,6 +185,7 @@
     .r-header {
       margin-bottom: 24px;
     }
+
     .r-eyebrow {
       font-size: 10px;
       font-weight: 700;
@@ -156,6 +194,7 @@
       text-transform: uppercase;
       margin-bottom: 6px;
     }
+
     .r-title {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 64px;
@@ -163,7 +202,11 @@
       color: #fff;
       letter-spacing: 3px;
     }
-    .r-title .lime { color: var(--lime); }
+
+    .r-title .lime {
+      color: var(--lime);
+    }
+
     .r-tagline {
       font-size: 13px;
       color: var(--off);
@@ -171,7 +214,11 @@
       line-height: 1.5;
       max-width: 440px;
     }
-    .r-tagline strong { color: #fff; font-weight: 600; }
+
+    .r-tagline strong {
+      color: #fff;
+      font-weight: 600;
+    }
 
     /* top divider bar */
     .r-divider {
@@ -201,37 +248,107 @@
       position: relative;
       overflow: hidden;
     }
+
     .scard::before {
       content: '';
       position: absolute;
-      right: 0; top: 0; bottom: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
       width: 3px;
     }
 
     /* S */
-    .sc-s { background: #0D211A; border: 1px solid rgba(200,241,53,.15); }
-    .sc-s .sl { color: var(--lime); }
-    .sc-s .stag { background: rgba(200,241,53,.12); color: var(--lime); }
-    .sc-s .sbar { background: var(--lime); }
-    .sc-s::before { background: var(--lime); }
+    .sc-s {
+      background: #0D211A;
+      border: 1px solid rgba(200, 241, 53, .15);
+    }
+
+    .sc-s .sl {
+      color: var(--lime);
+    }
+
+    .sc-s .stag {
+      background: rgba(200, 241, 53, .12);
+      color: var(--lime);
+    }
+
+    .sc-s .sbar {
+      background: var(--lime);
+    }
+
+    .sc-s::before {
+      background: var(--lime);
+    }
+
     /* W */
-    .sc-w { background: #1E0C0C; border: 1px solid rgba(255,107,107,.15); }
-    .sc-w .sl { color: var(--coral); }
-    .sc-w .stag { background: rgba(255,107,107,.12); color: var(--coral); }
-    .sc-w .sbar { background: var(--coral); }
-    .sc-w::before { background: var(--coral); }
+    .sc-w {
+      background: #1E0C0C;
+      border: 1px solid rgba(255, 107, 107, .15);
+    }
+
+    .sc-w .sl {
+      color: var(--coral);
+    }
+
+    .sc-w .stag {
+      background: rgba(255, 107, 107, .12);
+      color: var(--coral);
+    }
+
+    .sc-w .sbar {
+      background: var(--coral);
+    }
+
+    .sc-w::before {
+      background: var(--coral);
+    }
+
     /* O */
-    .sc-o { background: #0A1820; border: 1px solid rgba(91,229,255,.15); }
-    .sc-o .sl { color: var(--sky); }
-    .sc-o .stag { background: rgba(91,229,255,.12); color: var(--sky); }
-    .sc-o .sbar { background: var(--sky); }
-    .sc-o::before { background: var(--sky); }
+    .sc-o {
+      background: #0A1820;
+      border: 1px solid rgba(91, 229, 255, .15);
+    }
+
+    .sc-o .sl {
+      color: var(--sky);
+    }
+
+    .sc-o .stag {
+      background: rgba(91, 229, 255, .12);
+      color: var(--sky);
+    }
+
+    .sc-o .sbar {
+      background: var(--sky);
+    }
+
+    .sc-o::before {
+      background: var(--sky);
+    }
+
     /* T */
-    .sc-t { background: #120B20; border: 1px solid rgba(180,127,255,.15); }
-    .sc-t .sl { color: var(--viol); }
-    .sc-t .stag { background: rgba(180,127,255,.12); color: var(--viol); }
-    .sc-t .sbar { background: var(--viol); }
-    .sc-t::before { background: var(--viol); }
+    .sc-t {
+      background: #120B20;
+      border: 1px solid rgba(180, 127, 255, .15);
+    }
+
+    .sc-t .sl {
+      color: var(--viol);
+    }
+
+    .sc-t .stag {
+      background: rgba(180, 127, 255, .12);
+      color: var(--viol);
+    }
+
+    .sc-t .sbar {
+      background: var(--viol);
+    }
+
+    .sc-t::before {
+      background: var(--viol);
+    }
 
     /* card letter */
     .sl {
@@ -243,7 +360,10 @@
       text-align: center;
     }
 
-    .scard-body { flex: 1; }
+    .scard-body {
+      flex: 1;
+    }
+
     .stag {
       display: inline-block;
       padding: 3px 10px;
@@ -254,27 +374,30 @@
       text-transform: uppercase;
       margin-bottom: 6px;
     }
+
     .scard-vi {
       font-size: 12px;
       font-weight: 700;
-      color: rgba(255,255,255,.65);
+      color: rgba(255, 255, 255, .65);
       margin-bottom: 5px;
       letter-spacing: .3px;
     }
+
     .scard-text {
       font-size: 13.5px;
-      color: rgba(255,255,255,.52);
+      color: rgba(255, 255, 255, .52);
       line-height: 1.55;
       font-weight: 400;
     }
+
     .scard-text strong {
-      color: rgba(255,255,255,.85);
+      color: rgba(255, 255, 255, .85);
       font-weight: 600;
     }
 
     /* hint */
     .hint {
-      color: rgba(255,255,255,.18);
+      color: rgba(255, 255, 255, .18);
       font-size: 11px;
       font-family: 'Space Grotesk', sans-serif;
       text-align: center;
@@ -282,107 +405,114 @@
     }
   </style>
 </head>
+
 <body>
 
-<div class="scaler"><div class="post">
-  <div class="grain"></div>
+  <div class="scaler">
+    <div class="post">
+      <div class="grain"></div>
 
-  <!-- ── LEFT: PHOTO ── -->
-  <div class="left-photo">
-    <img src="main.jpg" alt="Thầy Lê Hậu"/>
+      <!-- ── LEFT: PHOTO ── -->
+      <div class="left-photo">
+        <img src="main.jpg" alt="Thầy Lê Hậu" />
 
-    <!-- S W O T badge stack on top-left -->
-    <div class="photo-badge">
-      <div class="badge-letter bl-s">S</div>
-      <div class="badge-letter bl-w">W</div>
-      <div class="badge-letter bl-o">O</div>
-      <div class="badge-letter bl-t">T</div>
-    </div>
+        <!-- S W O T badge stack on top-left -->
+        <div class="photo-badge">
+          <div class="badge-letter bl-s">S</div>
+          <div class="badge-letter bl-w">W</div>
+          <div class="badge-letter bl-o">O</div>
+          <div class="badge-letter bl-t">T</div>
+        </div>
 
-    <!-- Name at bottom of photo -->
-    <div class="photo-name">
-      <div class="photo-name-main">THẦY LÊ HẬU</div>
-      <div class="photo-name-role">Giảng viên · Nghiên cứu viên · Diễn giả</div>
+        <!-- Name at bottom of photo -->
+        <div class="photo-name">
+          <div class="photo-name-main">THẦY LÊ HẬU</div>
+          <div class="photo-name-role">Giảng viên · Nghiên cứu viên · Diễn giả</div>
+        </div>
+      </div>
+
+      <!-- ── RIGHT: SWOT ── -->
+      <div class="right-col">
+        <div class="r-header">
+          <div class="r-eyebrow">✦ Mảnh ghép hé lộ ✦</div>
+          <div class="r-title">SWOT<br /><span class="lime">Analysis</span></div>
+          <div class="r-tagline">
+            Không phải ngẫu nhiên — mà là quá trình nỗ lực bền bỉ để <strong>khẳng định năng lực</strong> của chính
+            mình.
+          </div>
+        </div>
+
+        <div class="r-divider"></div>
+
+        <div class="swot-stack">
+
+          <div class="scard sc-s">
+            <div class="sl">S</div>
+            <div class="scard-body">
+              <div class="stag">Strengths</div>
+              <div class="scard-vi">Giá trị nền tảng</div>
+              <div class="scard-text">
+                Nền tảng học thuật vững chắc cùng <strong>tư duy hệ thống</strong>, tạo tiền đề cho sự phát triển bền
+                vững.
+              </div>
+            </div>
+          </div>
+
+          <div class="scard sc-w">
+            <div class="sl">W</div>
+            <div class="scard-body">
+              <div class="stag">Weaknesses</div>
+              <div class="scard-vi">Khoảng trống cần hoàn thiện</div>
+              <div class="scard-text">
+                Xu hướng đặt <strong>tiêu chuẩn cao</strong> đôi khi khiến mất nhiều thời gian hơn cần thiết.
+              </div>
+            </div>
+          </div>
+
+          <div class="scard sc-o">
+            <div class="sl">O</div>
+            <div class="scard-body">
+              <div class="stag">Opportunities</div>
+              <div class="scard-vi">Dư địa phát triển</div>
+              <div class="scard-text">
+                Cơ hội mở rộng trong <strong>Social Media, Mental Health, AI</strong> — những lĩnh vực đang bùng nổ.
+              </div>
+            </div>
+          </div>
+
+          <div class="scard sc-t">
+            <div class="sl">T</div>
+            <div class="scard-body">
+              <div class="stag">Threats</div>
+              <div class="scard-vi">Thách thức cần đối diện</div>
+              <div class="scard-text">
+                Cần <strong>cân bằng</strong> giữa giảng dạy, nghiên cứu và phát triển cá nhân trong giới hạn môi
+                trường.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- ── RIGHT: SWOT ── -->
-  <div class="right-col">
-    <div class="r-header">
-      <div class="r-eyebrow">✦ Mảnh ghép hé lộ ✦</div>
-      <div class="r-title">SWOT<br/><span class="lime">Analysis</span></div>
-      <div class="r-tagline">
-        Không phải ngẫu nhiên — mà là quá trình nỗ lực bền bỉ để <strong>khẳng định năng lực</strong> của chính mình.
-      </div>
-    </div>
+  <div class="hint" id="hint">HIT - Personal Branding</div>
 
-    <div class="r-divider"></div>
-
-    <div class="swot-stack">
-
-      <div class="scard sc-s">
-        <div class="sl">S</div>
-        <div class="scard-body">
-          <div class="stag">Strengths</div>
-          <div class="scard-vi">Giá trị nền tảng</div>
-          <div class="scard-text">
-            Nền tảng học thuật vững chắc cùng <strong>tư duy hệ thống</strong>, tạo tiền đề cho sự phát triển bền vững.
-          </div>
-        </div>
-      </div>
-
-      <div class="scard sc-w">
-        <div class="sl">W</div>
-        <div class="scard-body">
-          <div class="stag">Weaknesses</div>
-          <div class="scard-vi">Khoảng trống cần hoàn thiện</div>
-          <div class="scard-text">
-            Xu hướng đặt <strong>tiêu chuẩn cao</strong> đôi khi khiến mất nhiều thời gian hơn cần thiết.
-          </div>
-        </div>
-      </div>
-
-      <div class="scard sc-o">
-        <div class="sl">O</div>
-        <div class="scard-body">
-          <div class="stag">Opportunities</div>
-          <div class="scard-vi">Dư địa phát triển</div>
-          <div class="scard-text">
-            Cơ hội mở rộng trong <strong>Social Media, Mental Health, AI</strong> — những lĩnh vực đang bùng nổ.
-          </div>
-        </div>
-      </div>
-
-      <div class="scard sc-t">
-        <div class="sl">T</div>
-        <div class="scard-body">
-          <div class="stag">Threats</div>
-          <div class="scard-vi">Thách thức cần đối diện</div>
-          <div class="scard-text">
-            Cần <strong>cân bằng</strong> giữa giảng dạy, nghiên cứu và phát triển cá nhân trong giới hạn môi trường.
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div></div>
-
-<div class="hint" id="hint">1080 × 1080 px · Single image · Chuẩn đăng Facebook</div>
-
-<script>
-  function scalePost() {
-    const post = document.querySelector('.post');
-    const scaler = document.querySelector('.scaler');
-    const vw = Math.min(window.innerWidth, 1080) - 32; // 16px padding each side
-    const scale = vw / 1080;
-    post.style.transform = `scale(${scale})`;
-    // shrink scaler height to match visual height
-    scaler.style.height = (1080 * scale) + 'px';
-  }
-  scalePost();
-  window.addEventListener('resize', scalePost);
-</script>
+  <script>
+    function scalePost() {
+      const post = document.querySelector('.post');
+      const scaler = document.querySelector('.scaler');
+      const vw = Math.min(window.innerWidth, 1080) - 32; // 16px padding each side
+      const scale = vw / 1080;
+      post.style.transform = `scale(${scale})`;
+      // shrink scaler height to match visual height
+      scaler.style.height = (1080 * scale) + 'px';
+    }
+    scalePost();
+    window.addEventListener('resize', scalePost);
+  </script>
 
 </body>
+
 </html>
