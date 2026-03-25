@@ -29,18 +29,29 @@
       flex-direction: column;
       align-items: center;
       gap: 20px;
-      padding: 32px 16px;
+      padding: 16px;
+      overflow-x: hidden;
+    }
+
+    /* Scaler wrapper — JS sets height to match scaled post */
+    .scaler {
+      width: 100%;
+      max-width: 1080px;
+      display: flex;
+      justify-content: center;
     }
 
     /* ── FRAME ── */
     .post {
-      width: var(--W);
-      height: var(--H);
+      width: 1080px;
+      height: 1080px;
       background: var(--bg);
       position: relative;
       overflow: hidden;
       box-shadow: 0 40px 100px rgba(0,0,0,.85);
       display: flex;
+      transform-origin: top left;
+      flex-shrink: 0;
     }
 
     /* ── GRAIN ── */
@@ -273,7 +284,7 @@
 </head>
 <body>
 
-<div class="post">
+<div class="scaler"><div class="post">
   <div class="grain"></div>
 
   <!-- ── LEFT: PHOTO ── -->
@@ -355,9 +366,23 @@
 
     </div>
   </div>
-</div>
+</div></div>
 
-<div class="hint">1080 × 1080 px · Single image · Chuẩn đăng Facebook</div>
+<div class="hint" id="hint">1080 × 1080 px · Single image · Chuẩn đăng Facebook</div>
+
+<script>
+  function scalePost() {
+    const post = document.querySelector('.post');
+    const scaler = document.querySelector('.scaler');
+    const vw = Math.min(window.innerWidth, 1080) - 32; // 16px padding each side
+    const scale = vw / 1080;
+    post.style.transform = `scale(${scale})`;
+    // shrink scaler height to match visual height
+    scaler.style.height = (1080 * scale) + 'px';
+  }
+  scalePost();
+  window.addEventListener('resize', scalePost);
+</script>
 
 </body>
 </html>
